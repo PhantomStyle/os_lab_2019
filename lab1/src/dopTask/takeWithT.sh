@@ -1,10 +1,7 @@
 #!/bin/bash
-for sentence in "$@"
+for word in "$@"
 do
-    for word in $sentence
-    do
-        if [[ $word == *"T"* || $word == *"t"* ]]; then
-            echo $word
-        fi
-    done
+    if [[ $word == *"T"* || $word == *"t"* ]]; then
+        echo $word
+    fi
 done

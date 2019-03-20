@@ -1,11 +1,8 @@
 #!/bin/bash
-for sentence in "$@"
+for word in "$@"
 do
-    for word in $sentence
-    do
-        len=${#word}
-        if [ "$len" -le 3 ]; then
-            echo $word
-        fi
-    done
+    len=${#word}
+    if [ "$len" -le 3 ]; then
+        echo $word
+    fi
 done

@@ -1,10 +1,7 @@
 #!/bin/bash
-for sentence in "$@"
+for word in "$@"
 do
-    for word in $sentence
-    do
-        if [[ $word != *"The"* && $word != *"the"* ]]; then
-            echo $word
-        fi
-    done
+    if [[ $word != *"The"* && $word != *"the"* ]]; then
+        echo $word
+    fi
 done
